@@ -1,17 +1,14 @@
 import { Module, ValidationPipe } from '@nestjs/common';
-import { CatsController } from './cats/cats.controller';
 import { APP_PIPE } from '@nestjs/core';
-import { CatsService } from './cats/cats.service';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
-  imports: [],
-  controllers: [CatsController],
+  imports: [CatsModule],
   providers: [
     {
       provide: APP_PIPE,
       useClass: ValidationPipe,
     },
-    CatsService,
   ],
 })
 export class AppModule {}
