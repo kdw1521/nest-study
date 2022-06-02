@@ -12,4 +12,8 @@ export class CatsService {
   findAll(): Cat[] {
     return this.cats;
   }
+
+  findOne(uuid: string): any {
+    return `uuid : ${uuid}`;
+  }
 }

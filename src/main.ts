@@ -7,7 +7,7 @@ import { AllExceptionFilter } from './common/filter/all-exception.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.use(logger);
+  // app.use(logger);
   const { httpAdapter } = app.get(HttpAdapterHost);
   app.useGlobalFilters(new AllExceptionFilter(httpAdapter));
   await app.listen(3000);

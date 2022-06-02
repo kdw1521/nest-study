@@ -33,3 +33,4 @@ export class AllExceptionFilter extends BaseExceptionFilter {
 //
 //     httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
 //   }
+// }

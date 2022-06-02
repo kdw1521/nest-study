@@ -1,0 +1,29 @@
+type Person {
+    id: String!
+    name: String!
+    number: String
+}
+
+input CreatePersonInput {
+    name: String!
+    number: String
+}
+
+type PersonResponse {
+    result: String!
+    msg: String!
+}
+
+
+
+
+
+type Query {
+    getAllPerson: [Person]
+    getPerson(id: String!): Person
+}
+
+type Mutation {
+    addPerson(person: CreatePersonInput!): PersonResponse
+    removePerson(id: String!): PersonResponse
+}
